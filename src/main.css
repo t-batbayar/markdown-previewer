@@ -1,0 +1,162 @@
+:global {
+	@import "/node_modules/normalize.css/normalize.css";
+}
+
+:root {
+
+}
+
+/* 
+	Default 16px * 0.625 = 10rem
+	1.2rem = 12px
+*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 1.6rem;
+}
+
+#wrapper {
+	display: flex;
+	justify-content: space-around;
+	margin: 30px 0;
+}
+
+.editor-container {
+	background: #fff;
+	border: 1px solid #777;
+	box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.8);
+	width: 45%;
+}
+
+.editor-container .editor-title {
+	font-weight: 600;
+	background: #FF7043;
+	margin: 0;
+	padding: 10px;
+}
+
+.editor-container textarea {
+	border: none;
+	resize: none;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.preview-container {
+	background: #fff;
+	border: 1px solid #777;
+	box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.8);
+	width: 45%;
+}
+
+.preview-container .preview-title {
+	font-weight: 600;
+	background: #FF7043;
+	margin: 0;
+	padding: 10px;
+}
+
+#preview {
+	padding: 10px;
+}
+
+#preview h1,
+#preview h2,
+#preview h3,
+#preview h4,
+#preview h5,
+#preview h6 {
+	font-family: serif;
+}
+
+#preview h1 {
+	border-bottom: 2px solid #444;
+}
+
+#preview h2 {
+	border-bottom: 2px solid #444;
+}
+
+#preview pre {
+	background: #FFFFCF;
+	padding: 10px 0 10px 20px;
+}
+
+#preview blockquote {
+	background: #f2f2f2;
+	margin: 0;
+	padding: 1em 40px;
+}
+
+#preview blockquote p {
+	border-left: 2px solid #FF7043;
+	padding-left: 5px;
+}
+
+#preview th {
+  background-color: #FF7043;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#preview td, #preview th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#preview tr:nth-child(even){background-color: #f2f2f2;}
+
+#preview tr:hover {background-color: #ddd;}
+
+#preview img {
+	width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+	#wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.editor-container {
+		margin: 0 0 30px;
+		width: 60%;
+	}
+
+	.editor-container textarea {
+		min-height: auto;
+		height: 400px;
+	}
+
+	.preview-container {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.preview-container pre code {
+		font-size: 12px;
+	}
+
+	.editor-container {
+		width: 95%;
+	}
+
+	.preview-container {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.preview-container pre code {
+		font-size: 10px;
+	}
+}
